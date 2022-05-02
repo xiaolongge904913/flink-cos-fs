@@ -99,11 +99,11 @@ public class RefCountedBufferingFileStream extends RefCountedFSOutputStream {
 
     @Override
     public void flush() throws IOException {
-        LOG.info("begin to flush the buffer to the file: {}.", this.currentTmpFile);
+//        LOG.info("begin to flush the buffer to the file: {}.", this.currentTmpFile);
         currentTmpFile.write(buffer, 0, positionInBuffer);
         currentTmpFile.flush();
         positionInBuffer = 0;
-        LOG.info("finish to flush the buffer to the file: {}.", this.currentTmpFile);
+//        LOG.info("finish to flush the buffer to the file: {}.", this.currentTmpFile);
     }
 
     @Override
@@ -121,10 +121,10 @@ public class RefCountedBufferingFileStream extends RefCountedFSOutputStream {
     @Override
     public void close() {
         if (!closed) {
-            LOG.info("begin to close the file: {}. ", this.currentTmpFile);
+//            LOG.info("begin to close the file: {}. ", this.currentTmpFile);
             currentTmpFile.closeStream();
             closed = true;
-            LOG.info("end to close the file: {}.", this.currentTmpFile);
+//            LOG.info("end to close the file: {}.", this.currentTmpFile);
         }
     }
 
