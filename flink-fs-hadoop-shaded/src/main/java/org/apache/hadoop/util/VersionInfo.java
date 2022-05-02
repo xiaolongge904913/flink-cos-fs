@@ -43,7 +43,7 @@ public class VersionInfo {
 		info = new Properties();
 
 		if ("common".equals(component)) {
-			info.setProperty("version", "3.1.0");
+			info.setProperty("version", "2.8.5");
 			info.setProperty("revision", "16b70619a24cdcf5d3b0fcf4b58ca77238ccbe6d");
 			info.setProperty("branch", "branch-3.1.0");
 			info.setProperty("user", "wtan");
