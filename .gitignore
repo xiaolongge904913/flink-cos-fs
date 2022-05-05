@@ -130,3 +130,4 @@ Temporary Items
 
 .idea/
 target/
+dependency-reduced-pom.xml
